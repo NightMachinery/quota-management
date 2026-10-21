@@ -112,7 +112,8 @@ No fixed number of reviews or children is universally affordable.
 ## Durable state and alerts
 
 Keep usage measurements, account mappings and results outside public repositories.
-Use a private run directory. The watcher maintains generated `Gauge` and `Reader`
+Use the shared default `~/.agents/runs/<project>/<run>/`, outside every repository.
+The watcher maintains generated `Gauge` and `Reader`
 lines inside `## Quota` while preserving coordinator notes and other sections.
 A `~` after a percentage means last known data, not a fresh measurement.
 

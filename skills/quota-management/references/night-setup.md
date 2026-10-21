@@ -64,9 +64,12 @@ Never infer the target account from a hardcoded alias.
 Set a private run directory and run a single cycle from the installed skill:
 
 ```sh
-export QUOTA_WATCH_BASE=~/.local/state/quota-management/run
+export QUOTA_WATCH_BASE=~/.agents/runs/'<project>/<run>'
 bash scripts/quota-watch.sh --once
 ```
+
+Replace the project/run placeholders. This is the default shared run layout
+across Claude Code, Codex and other agents, outside every repository.
 
 The log says `readers: night` and lists the selected sources. The watcher:
 

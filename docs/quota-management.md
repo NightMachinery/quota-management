@@ -21,7 +21,9 @@ A machine with only one provider does not need to install the other.
 
 ## What the watcher owns
 
-`QUOTA_WATCH_BASE` is required and identifies a private run directory. It owns
+`QUOTA_WATCH_BASE` is required; use the shared default layout
+`~/.agents/runs/<project>/<run>/` outside every repository so different agent
+harnesses and successors use the same private files. It owns
 `logs/quota-watch.log`, `logs/quota-watch.state`, `logs/quota-watch.fail` and
 `alerts/quota-*.md`, and updates generated lines in `STATE.md`. Run one watcher
 per directory to avoid competing writes. Other agents can edit coordinator

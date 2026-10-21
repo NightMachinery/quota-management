@@ -145,9 +145,12 @@ never infer headroom from the absence of an alert.
 From the installed skill directory:
 
 ```sh
-export QUOTA_WATCH_BASE=~/.local/state/quota-management/run
+export QUOTA_WATCH_BASE=~/.agents/runs/'<project>/<run>'
 bash scripts/quota-watch.sh --once
 ```
+
+Replace the project/run placeholders. This is the default shared run layout
+across Claude Code, Codex and other agents, outside every repository.
 
 Inspect `STATE.md` and `logs/quota-watch.log` in that directory. The log says
 `readers: generic` and names the chosen source aliases. With only one provider,
